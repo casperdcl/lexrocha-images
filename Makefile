@@ -7,3 +7,5 @@ unilogo.png: unilogo.jpg
 
 %.png:
 	convert "$<" -white-threshold 90% -transparent white -resize 64x64 "$@"
+favicon.ico: SER-logo.png
+	convert "$<" -gravity center -resize 32x32 -background transparent -extent 32x32 "$@"
